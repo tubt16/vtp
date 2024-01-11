@@ -1,0 +1,26 @@
+all:
+  hosts:
+    asb-node01:
+      ansible_host: 172.31.41.73
+    asb-node02:
+      ansible_host: 172.31.42.113
+    asb-node03:
+      ansible_host: 172.31.37.16
+
+  children:
+    centos9:
+      hosts:
+        asb-node01:
+    centos9:
+      hosts:
+        asb-node02:
+    ubuntu20:
+      hosts:
+        asb-node03:
+    dc_oregon:
+      children:
+        centos9:
+        ubuntu20:
+      vars:
+        ansible_user: root
+        ansible_ssh_private_key: ~/.ssh/id_rsa

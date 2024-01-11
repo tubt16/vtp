@@ -1,0 +1,1 @@
+Repo này sẽ giới thiệu các lệnh trong linux từ cơ bản tới nâng cao đi kèm theo đó là các vị dụ

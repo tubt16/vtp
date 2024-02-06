@@ -53,6 +53,23 @@ Thông số
 |Attempts|Số lần thực hiện các Scenario steps, Có thể chỉ định tối đa 10 lần thử, giá trị mặc định là 1. Lưu ý: Zabbix sẽ không lặp lại một bước do mã phản hồi sai hoặc chuỗi bắt buộc không khớp|
 |Agent|Chọn một client agent, User macros có thể được sử dụng trong trường này|
 |HTTP proxy|Ta có thể sử dụng proxy HTTP để sử dụng bằng cách sử dụng định dạng [protocol://][username[:password]@]proxy.example.com[:port], User macros có thể được sử dụng trong trường này|
-|Variables|Các biến có thể được sử dụng trong các Scenario steps (URL, post variables). 
-Chúng ta có các định dạng sau: {macro1}=value1, {macro2}=value2, {macro3}=regex:<regular expression>. Ví dụ: For example: {username}=Alexei, {password}=kj3h5kJ34bd, {hostid}=regex:hostid is ([0-9]+)|
-|Headers|Tiêu đề|
+|Variables|Các biến có thể được sử dụng trong các Scenario steps (URL, post variables). Chúng ta có các định dạng sau: {macro1}=value1, {macro2}=value2, {macro3}=regex:<regular expression>. Ví dụ: For example: {username}=Alexei, {password}=kj3h5kJ34bd, {hostid}=regex:hostid is ([0-9]+)|
+|Headers|Tiêu đề HTTP được sử dụng khi thực hiện một yêu cầu. Tiêu đề mặc định và tùy chỉnh có thể được sử dụng. Hỗ trợ User macros|
+|Enabled|Scenario sẽ hoạt động nếu chỗ này được tích, nếu không thì bị vô hiệu hóa|
+
+Tab Steps cho phép chúng ta định cấu hình các bước trong Web Scenarios. Để thêm một Step hãy click vào nút Add
+
+![](/zabbix/images/scenario1.png)
+
+## Config steps
+
+![](/zabbix/images/step.png)
+
+**Step parameters:**
+
+|Parameter|Description|
+|---|---|
+|Name|Tên của Step, có hỗ trợ User macros|
+|URL|URL để kết nối và truy xuất dữ liệu, hỗ trợ User macros|
+|Post|Các biến HTTP POST. Trong chế độ dữ liệu biểu mẫu, được chỉ định dưới dạng cặp thuộc tính và giá trị, hỗ trợ User macros|
+|Variables|

@@ -78,10 +78,7 @@ Tạo thư mục lưu trữ source Kafka và di chuyển source đã tải về 
 
 ```sh
 mkdir -p /opt/kafka
-mv kafka_2.11-2.1.0 /opt/kafka
-cd /opt/kafka/kafka_2.11-2.1.0
-mv kafka_2.12-2.1.0/* .
-rm -rf /opt/kafka/kafka_2.11-2.1.0
+mv kafka_2.11-2.1.0/* /opt/kafka
 ```
 
 Tạo thư mục cho log message Kafka và snapshot cho Zookeeper

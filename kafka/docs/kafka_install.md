@@ -66,19 +66,19 @@ Tạo user Kafka
 useradd kafka
 ```
 
-Tải xuống phiên bản Kafka 2.1.0 từ trang chủ và giải nén
+Tải xuống phiên bản Kafka 3.6.1 từ trang chủ và giải nén
 
 ```sh
 cd ~
-wget https://archive.apache.org/dist/kafka/2.1.0/kafka_2.11-2.1.0.tgz
-tar xzf kafka_2.11-2.1.0.tgz
+wget https://archive.apache.org/dist/kafka/3.6.1/kafka_2.12-3.6.1.tgz
+tar xzf kafka_2.12-3.6.1.tgz
 ```
 
 Tạo thư mục lưu trữ source Kafka và di chuyển source đã tải về vao thư mục vừa tạo
 
 ```sh
 mkdir -p /opt/kafka
-mv kafka_2.11-2.1.0/* /opt/kafka
+mv kafka_2.12-3.6.1/* /opt/kafka
 ```
 
 Tạo thư mục cho log message Kafka và snapshot cho Zookeeper
